@@ -1,5 +1,5 @@
 const {red, green, yellow, magenta} = require('chalk');
-const day = require('dayjs');
+const moment = require('moment');
 
 module.exports = class CustomConsole {
     
@@ -25,7 +25,7 @@ module.exports = class CustomConsole {
         if (!content || typeof content !== "string") throw new TypeError('content must be a string object');
         let finalContent = `[${magenta('LOG')}] `;
         if (author && this.opt.author) finalContent += `[${author.toUpperCase()}] `; 
-        if (this.opt.datetime) finalContent += `[${day(new Date()).format('HH:mm:ss')}] `;
+        if (this.opt.datetime) finalContent += `[${moment(new Date()).format('LTS')}] `;
         finalContent += `- ${content}`;
         console.log(finalContent);
         return true;
@@ -41,7 +41,7 @@ module.exports = class CustomConsole {
         if (!content || typeof content !== "string") throw new TypeError('content must be a string object');
         let finalContent = `[${red('ERROR')}] `;
         if (author && this.opt.author) finalContent += `[${author.toUpperCase()}] `; 
-        if (this.opt.datetime) finalContent += `[${day(new Date()).format('HH:mm:ss')}] `;
+        if (this.opt.datetime) finalContent += `[${moment(new Date()).format('LTS')}] `;
         finalContent += `- ${content}`;
         console.log(finalContent);
         return true;
@@ -57,7 +57,7 @@ module.exports = class CustomConsole {
         if (!content || typeof content !== "string") throw new TypeError('content must be a string object');
         let finalContent = `[${yellow('WARN')}] `;
         if (author && this.opt.author) finalContent += `[${author.toUpperCase()}] `; 
-        if (this.opt.datetime) finalContent += `[${day(new Date()).format('HH:mm:ss')}] `;
+        if (this.opt.datetime) finalContent += `[${moment(new Date()).format('LTS')}] `;
         finalContent += `- ${content}`;
         console.log(finalContent);
         return true;
@@ -73,7 +73,7 @@ module.exports = class CustomConsole {
         if (!content || typeof content !== "string") throw new TypeError('content must be a string object');
         let finalContent = `[${green('SUCCESS')}] `;
         if (author && this.opt.author) finalContent += `[${author.toUpperCase()}] `; 
-        if (this.opt.datetime) finalContent += `[${day(new Date()).format('HH:mm:ss')}] `;
+        if (this.opt.datetime) finalContent += `[${moment(new Date()).format('LTS')}] `;
         finalContent += `- ${content}`;
         console.log(finalContent);
         return true;
