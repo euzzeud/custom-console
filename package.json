@@ -1,14 +1,14 @@
 {
   "name": "custom-console22",
   "version": "0.1.1",
-  "description": "Tooltip permettant d'avoir de meilleurs logs",
+  "description": "Tooltip for better console logs. Created by Thibault-MJS.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Thibault-MJS/custom-console.git"
+    "url": "git+https://github.com/euzzeud/custom-console.git"
   },
   "keywords": [
     "#tooltip",
@@ -18,11 +18,11 @@
   "author": "Thibault.M",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Thibault-MJS/custom-console/issues"
+    "url": "https://github.com/euzzeud/custom-console/issues"
   },
-  "homepage": "https://github.com/Thibault-MJS/custom-console#readme",
+  "homepage": "https://github.com/euzzeud/custom-console#readme",
   "dependencies": {
     "chalk": "^4.1.2",
-    "dayjs": "^1.10.7"
+    "moment": "^2.29.4"
   }
 }
